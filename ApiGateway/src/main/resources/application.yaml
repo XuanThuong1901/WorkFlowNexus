@@ -1,0 +1,31 @@
+
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: organizationservice
+          uri: ${POSTS_ROUTE_URI:http://localhost:8002}
+          predicates:
+            - Path=/organization/**
+        - id: projecttaskservice
+          uri: ${POSTS_ROUTE_URI:http://localhost:8003}
+          predicates:
+            - Path=/project_task/**
+        - id: productservice
+          uri: ${POSTS_ROUTE_URI:http://localhost:8004}
+          predicates:
+            - Path=/product/**
+  application:
+    name: api-gateway
+  main:
+    web-application-type: reactive
+
+server:
+  port: 8000
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
