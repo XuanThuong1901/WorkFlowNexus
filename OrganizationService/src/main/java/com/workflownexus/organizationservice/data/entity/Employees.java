@@ -26,9 +26,9 @@ public class Employees {
     private String lastName;
     private String telephone;
     private String address;
-    private boolean sex;
+    private Boolean sex;
     private String avatar;
-    private boolean status;
+    private Boolean status;
 
     @OneToMany(mappedBy = "employee", fetch = FetchType.LAZY)
     private List<EmployeeRoles> employeeRoles;

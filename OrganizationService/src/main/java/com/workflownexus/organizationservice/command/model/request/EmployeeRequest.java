@@ -19,8 +19,8 @@ public class EmployeeRequest {
     private String lastName;
     private String telephone;
     private String address;
-    private boolean sex;
-//    private String avatar;
-    private boolean status;
+    private Boolean sex;
+    private String avatar;
+    private Boolean status;
     private List<Integer> roleList;
 }
