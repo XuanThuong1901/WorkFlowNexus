@@ -17,4 +17,16 @@ public class EmployeeEventHandler {
         EmployeeResponse response = iEmployeeService.createEmployee(event);
         return response;
     }
+
+    @EventHandler
+    public EmployeeResponse on(UpdateEmployeeEvent event){
+        EmployeeResponse response = iEmployeeService.updateEmployee(event);
+        return response;
+    }
+
+    @EventHandler
+    public EmployeeResponse on(UpdateRoleEmployeeEvent event){
+        EmployeeResponse response = iEmployeeService.updateRoleEmployee(event);
+        return response;
+    }
 }
