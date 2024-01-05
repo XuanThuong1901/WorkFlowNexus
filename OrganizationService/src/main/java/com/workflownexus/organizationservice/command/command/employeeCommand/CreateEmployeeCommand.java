@@ -5,6 +5,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import org.axonframework.modelling.command.TargetAggregateIdentifier;
+import org.springframework.web.multipart.MultipartFile;
 
 import java.util.List;
 
@@ -15,6 +16,7 @@ import java.util.List;
 public class CreateEmployeeCommand {
 
     @TargetAggregateIdentifier
+    private String employeeId;
     private String email;
     private String password;
     private String firstName;
@@ -22,6 +24,6 @@ public class CreateEmployeeCommand {
     private String telephone;
     private String address;
     private boolean sex;
-    private String avatar;
+    private MultipartFile avatar;
     private List<Integer> roles;
 }

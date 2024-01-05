@@ -1,4 +1,4 @@
-package com.workflownexus.organizationservice.command.model;
+package com.workflownexus.organizationservice.command.model.request;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -20,7 +20,7 @@ public class EmployeeRequest {
     private String telephone;
     private String address;
     private boolean sex;
-    private String avatar;
+//    private String avatar;
     private boolean status;
     private List<Integer> roleList;
 }

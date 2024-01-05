@@ -4,6 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.springframework.web.multipart.MultipartFile;
 
 import java.util.List;
 
@@ -20,7 +21,7 @@ public class CreateEmployeeEvent {
     private String telephone;
     private String address;
     private boolean sex;
-    private String avatar;
+    private MultipartFile avatar;
     private boolean status;
     private List<Integer> roles;
 }
