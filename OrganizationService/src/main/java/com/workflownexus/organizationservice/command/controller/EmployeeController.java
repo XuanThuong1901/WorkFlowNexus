@@ -4,6 +4,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.workflownexus.organizationservice.command.command.employeeCommand.CreateEmployeeCommand;
 import com.workflownexus.organizationservice.command.command.employeeCommand.UpdateEmployeeCommand;
 import com.workflownexus.organizationservice.command.command.employeeCommand.UpdateRoleEmployeeCommand;
+import com.workflownexus.organizationservice.command.command.employeeCommand.UpdateStatusEmployeeCommand;
 import com.workflownexus.organizationservice.command.model.request.EmployeeRequest;
 import com.workflownexus.organizationservice.command.model.response.EmployeeResponse;
 import com.workflownexus.organizationservice.common.Message;
@@ -48,7 +49,6 @@ public class EmployeeController {
         UpdateEmployeeCommand command = EmployeeMapper.INSTANCE.mapToUpdateEmployeeCommand(employeeRequest);
 
         command.setAvatar(avatar);
-//        System.out.println(command);
         EmployeeResponse response = commandGateway.sendAndWait(command);
         if(response.getMessage().equals(Message.UPDATE_EMPLOYEE_SUCCESS))
             return ResponseEntity.ok(response);
@@ -60,12 +60,22 @@ public class EmployeeController {
 
         UpdateRoleEmployeeCommand command = EmployeeMapper.INSTANCE.mapToUpdateRoleEmployeeCommand(request);
 
-//        System.out.println(command);
         EmployeeResponse response = commandGateway.sendAndWait(command);
-        if(response.getMessage().equals(Message.UPDATE_EMPLOYEE_SUCCESS))
+        if(response.getMessage().equals(Message.UPDATE_EMPLOYEE_ROLE_SUCCESS))
             return ResponseEntity.ok(response);
         return ResponseEntity.badRequest().body(response);
     }
+
+//    @PostMapping("/update_status/{employeeId}")
+//    public ResponseEntity<EmployeeResponse> updateStatusEmployee(@RequestParam(name = "employeeId") String employeeId){
+//
+//        UpdateStatusEmployeeCommand command = ;
+//
+//        EmployeeResponse response = commandGateway.sendAndWait(command);
+//        if(response.getMessage().equals(Message.UPDATE_EMPLOYEE_ROLE_SUCCESS))
+//            return ResponseEntity.ok(response);
+//        return ResponseEntity.badRequest().body(response);
+//    }
 
     private EmployeeRequest convert(String request){
         return new ObjectMapper().convertValue(request, EmployeeRequest.class);

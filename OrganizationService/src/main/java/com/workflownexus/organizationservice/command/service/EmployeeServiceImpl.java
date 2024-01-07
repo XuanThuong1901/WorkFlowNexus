@@ -117,7 +117,7 @@ public class EmployeeServiceImpl implements IEmployeeService{
 
             employee.setEmployeeRoles(employeeRolesList);
             employeeRepo.save(employee);
-            
+
             return new EmployeeResponse(Message.UPDATE_EMPLOYEE_ROLE_SUCCESS);
 
         }catch (Exception e){
@@ -128,6 +128,7 @@ public class EmployeeServiceImpl implements IEmployeeService{
 
     @Override
     public EmployeeResponse updateStatusEmployee(UpdateStatusEmployeeEvent event) {
+
         return null;
     }
 
@@ -150,7 +151,6 @@ public class EmployeeServiceImpl implements IEmployeeService{
             if(role == null){
                 return null;
             }
-
             EmployeeRoles employeeRole = new EmployeeRoles(new EmployeeRoleId(role.getRoleId(), employee.getEmployeeId()), role, employee);
             employeeRolesList.add(employeeRole);
         }

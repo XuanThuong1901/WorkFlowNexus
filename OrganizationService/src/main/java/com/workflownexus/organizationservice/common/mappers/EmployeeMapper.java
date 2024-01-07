@@ -7,6 +7,8 @@ import com.workflownexus.organizationservice.command.event.employeeEvent.CreateE
 import com.workflownexus.organizationservice.command.event.employeeEvent.UpdateEmployeeEvent;
 import com.workflownexus.organizationservice.command.event.employeeEvent.UpdateRoleEmployeeEvent;
 import com.workflownexus.organizationservice.command.model.request.EmployeeRequest;
+import com.workflownexus.organizationservice.data.entity.Employees;
+import com.workflownexus.organizationservice.query.model.response.EmployeeResponse;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.factory.Mappers;
@@ -29,4 +31,7 @@ public interface EmployeeMapper {
     UpdateRoleEmployeeCommand mapToUpdateRoleEmployeeCommand(EmployeeRequest request);
 
     UpdateRoleEmployeeEvent mapToUpdateRoleEmployeeEvent(UpdateRoleEmployeeCommand command);
+
+    @Mapping(target = "roleList", ignore = true)
+    EmployeeResponse mapToEmployeeEntity(Employees employee);
 }
