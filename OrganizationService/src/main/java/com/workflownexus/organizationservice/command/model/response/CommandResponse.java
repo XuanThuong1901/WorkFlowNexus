@@ -1,14 +1,14 @@
-package com.workflownexus.organizationservice.query.query.employeeQuery;
+package com.workflownexus.organizationservice.command.model.response;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-@Getter
 @Setter
+@Getter
 @NoArgsConstructor
 @AllArgsConstructor
-public class GetDepartmentEmployee {
-    private Integer departmentId;
+public class CommandResponse {
+    private String message;
 }

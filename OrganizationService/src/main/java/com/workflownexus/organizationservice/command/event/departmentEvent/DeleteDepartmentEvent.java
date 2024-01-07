@@ -1,4 +1,4 @@
-package com.workflownexus.organizationservice.command.model.response;
+package com.workflownexus.organizationservice.command.event.departmentEvent;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -9,6 +9,6 @@ import lombok.Setter;
 @Getter
 @NoArgsConstructor
 @AllArgsConstructor
-public class EmployeeResponse {
-    private String message;
+public class DeleteDepartmentEvent {
+    private String departmentId;
 }
