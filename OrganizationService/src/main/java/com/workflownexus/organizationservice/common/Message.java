@@ -15,4 +15,13 @@ public class Message {
 
     public static final String UPDATE_EMPLOYEE_ROLE_SUCCESS = "updated employee role success";
     public static final String UPDATE_EMPLOYEE_ROLE_ERROR = "updated employee role error";
+
+
+
+    public static final String CREATE_DEPARTMENT_SUCCESS = "created department success";
+    public static final String CREATE_DEPARTMENT_ERROR = "created department error";
+    public static final String ERROR_ACCESSING_DEPARTMENT = "error accessing department";
+    public static final String UPDATE_DEPARTMENT_SUCCESS = "updated department success";
+    public static final String UPDATE_DEPARTMENT_ERROR = "updated department error";
+
 }

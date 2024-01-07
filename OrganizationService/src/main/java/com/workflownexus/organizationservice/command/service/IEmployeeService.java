@@ -7,12 +7,11 @@ import com.workflownexus.organizationservice.command.event.employeeEvent.CreateE
 import com.workflownexus.organizationservice.command.event.employeeEvent.UpdateEmployeeEvent;
 import com.workflownexus.organizationservice.command.event.employeeEvent.UpdateRoleEmployeeEvent;
 import com.workflownexus.organizationservice.command.event.employeeEvent.UpdateStatusEmployeeEvent;
-import com.workflownexus.organizationservice.command.model.response.EmployeeResponse;
-import org.springframework.web.multipart.MultipartFile;
+import com.workflownexus.organizationservice.command.model.response.CommandResponse;
 
 public interface IEmployeeService {
-    EmployeeResponse createEmployee(CreateEmployeeEvent event);
-    EmployeeResponse updateEmployee(UpdateEmployeeEvent event);
-    EmployeeResponse updateRoleEmployee(UpdateRoleEmployeeEvent event);
-    EmployeeResponse updateStatusEmployee(UpdateStatusEmployeeEvent event);
+    CommandResponse createEmployee(CreateEmployeeEvent event);
+    CommandResponse updateEmployee(UpdateEmployeeEvent event);
+    CommandResponse updateRoleEmployee(UpdateRoleEmployeeEvent event);
+    CommandResponse updateStatusEmployee(UpdateStatusEmployeeEvent event);
 }
