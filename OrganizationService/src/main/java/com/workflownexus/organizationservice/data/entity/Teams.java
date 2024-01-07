@@ -31,4 +31,7 @@ public class Teams {
 
     @OneToMany(mappedBy = "team", fetch = FetchType.LAZY)
     private List<Employees> employeesList;
+
+    @OneToMany(mappedBy = "team", fetch = FetchType.LAZY)
+    private List<SubTeams> subTeamsList;
 }

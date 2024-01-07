@@ -19,6 +19,10 @@ public class SubTeams {
     private String subTeamId;
     private String description;
 
+    @ManyToOne(fetch = FetchType.EAGER, optional = false)
+    @JoinColumn(name = "teamId")
+    private Teams team;
+
     @OneToMany(mappedBy = "subTeam")
     private List<EmployeeSubTeams> employeeSubTeamsList;
 }
