@@ -11,9 +11,9 @@ import java.util.List;
 public interface EmployeeRepo extends JpaRepository<Employees, String> {
 
     @Query()
-    List<Employees> findByDepartment_DepartmentId(Integer departmentId);
+    List<Employees> findByDepartment_DepartmentId(String departmentId);
 
     @Query()
-    List<Employees> findByTeam_TeamId(Integer teamId);
+    List<Employees> findByTeam_TeamId(String teamId);
 
 }
