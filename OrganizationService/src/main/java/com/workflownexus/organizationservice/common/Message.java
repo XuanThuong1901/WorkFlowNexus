@@ -20,8 +20,18 @@ public class Message {
 
     public static final String CREATE_DEPARTMENT_SUCCESS = "created department success";
     public static final String CREATE_DEPARTMENT_ERROR = "created department error";
+    public static final String DEPARTMENT_NOT_FOUND = "department not found";
     public static final String ERROR_ACCESSING_DEPARTMENT = "error accessing department";
     public static final String UPDATE_DEPARTMENT_SUCCESS = "updated department success";
     public static final String UPDATE_DEPARTMENT_ERROR = "updated department error";
+
+    public static final String CREATE_TEAM_SUCCESS = "created team success";
+    public static final String CREATE_TEAM_ERROR = "created team error";
+    public static final String TEAM_NOT_FOUND = "Team not found";
+    public static final String UPDATE_TEAM_SUCCESS = "updated team success";
+    public static final String UPDATE_TEAM_ERROR = "updated team error";
+    public static final String TEAM_CANNOT_DELETE = "team can't delete";
+    public static final String DELETE_TEAM_SUCCESS = "deleted team success";
+    public static final String DELETE_TEAM_ERROR = "deleted team error";
 
 }
