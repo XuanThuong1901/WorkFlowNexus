@@ -16,12 +16,11 @@ import java.util.List;
 public class Teams {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
     private String teamId;
 
     private String teamName;
     private String description;
-    private boolean status;
+    private Boolean status;
     private Date createdDate;
     private Date closedDate;
 

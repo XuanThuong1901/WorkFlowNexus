@@ -1,23 +1,13 @@
 package com.workflownexus.organizationservice.query.projection;
 
-import com.workflownexus.organizationservice.common.mappers.EmployeeMapper;
-import com.workflownexus.organizationservice.data.entity.EmployeeRoles;
-import com.workflownexus.organizationservice.data.entity.EmployeeSubTeams;
-import com.workflownexus.organizationservice.data.entity.Employees;
-import com.workflownexus.organizationservice.data.entity.SubTeams;
-import com.workflownexus.organizationservice.data.repository.EmployeeRepo;
-import com.workflownexus.organizationservice.data.repository.SubTeamRepo;
 import com.workflownexus.organizationservice.query.model.response.EmployeeResponse;
-import com.workflownexus.organizationservice.query.model.response.RoleResponse;
 import com.workflownexus.organizationservice.query.query.employeeQuery.*;
 import com.workflownexus.organizationservice.query.service.IEmployeeQueryService;
 import lombok.RequiredArgsConstructor;
 import org.axonframework.queryhandling.QueryHandler;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
 
 @Service
 @RequiredArgsConstructor
