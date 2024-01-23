@@ -2,6 +2,7 @@ package com.workflownexus.organizationservice.common.mappers;
 
 import com.workflownexus.organizationservice.command.command.teamCommand.CreateTeamCommand;
 import com.workflownexus.organizationservice.command.model.request.TeamRequest;
+import com.workflownexus.organizationservice.data.entity.Teams;
 import org.mapstruct.Mapper;
 import org.mapstruct.factory.Mappers;
 
@@ -12,4 +13,6 @@ public interface TeamMapper {
     Object mapToTeamCommand(TeamRequest request);
     Object mapToTeamEvent(Object command);
     Object mapToTeamEntity(Object event);
+
+    Object mapToTeamResponse(Teams teams);
 }
